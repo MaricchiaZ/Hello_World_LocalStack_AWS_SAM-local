@@ -8,78 +8,79 @@ Projeto feito pela equipe: Welton (wleite), Gabriel (gissao-m) e Maria Clara (ma
 Para isso:
 Tenha o docker desktop instalado e aberto
 
-No workspace, inicie o container:
+No workspace, inicie o container:\
 `localstack start -d`
 
 ### Passo a passo para a inicialização do Hello_World
 
-Para iniciar um projeto no AWS SAMlocal:
+Para iniciar um projeto no AWS SAMlocal:\
 `samlocal init`
 
-Escolhemos usar os templates semi-prontos, para fins didáticos:
+Escolhemos usar os templates semi-prontos, para fins didáticos:\
 `Choice: 1 - AWS Quick Start Templates`
 
-Usaremos um template pronto:
+Usaremos um template pronto:\
 `Template: 1 - Hello World Example `
 
-Não queremos que o projeto seja na versão mais atual do python
+Não queremos que o projeto seja na versão mais atual do python\
 `Use the most popular runtime and package type? (Python and zip) [y/N]: N`
 
-Escolha a versão do python que você tem instalada
+Escolha a versão do python que você tem instalada\
 `Runtime: 16`
 
-Queremos usar o zip:
+Queremos usar o zip:\
 `Package type: 1`
 
-Como é um projeto simples para teste escolheremos o NÃO:
+Como é um projeto simples para teste escolheremos o NÃO:\
 `Would you like to enable X-Ray tracing on the function(s) in your application?  [y/N]: N`
 
-Como é um projeto simples para teste escolheremos o NÃO:
+Como é um projeto simples para teste escolheremos o NÃO:\
 `Would you like to enable monitoring using CloudWatch Application Insights? For more info, please view https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch-application-insights.html [y/N]: N`
 
-Dê um nome ao seu projeto:
+Dê um nome ao seu projeto:\
 `Project name [sam-app]: Hello_World`
 
 
 ### Entre na pasta do projeto Hello_World
 
+
 `cd Hello_World`
 
-Agora compile o projeto
-`samlocal build`
+Agora compile o projeto\
+`samlocal build`\
 
 ### Passo a passo para subir o projeto na AWS 
 (lembre-se que estamos usando tudo localmente)
 
-Para subir a aplicação, podendo configurar os detalhes
-`samlocal deploy --guided`
+Para subir a aplicação, podendo configurar os detalhes\
+`samlocal deploy --guided`\
 
-escolha o nome do projeto, se quiser usar o que já está aí, clique ENTER
-`Stack Name [Hello_World]: ENTER`
+escolha o nome do projeto, se quiser usar o que já está aí, clique ENTER\
+`Stack Name [Hello_World]: ENTER`\
 
-Para funcionar, você deve usar a região "us-east-1": 
-`AWS Region []:  us-east-1`
+Para funcionar, você deve usar a região "us-east-1": \
+`AWS Region []:  us-east-1`\
 
-Como é um projeto para teste podemos deixar como NÃO
-`Confirm changes before deploy [Y/n]: N`
+Como é um projeto para teste podemos deixar como NÃO\
+`Confirm changes before deploy [Y/n]: N`\
 
-Mantenha como está
-` Allow SAM CLI IAM role creation [Y/n]:  Y`
+Mantenha como está\
+` Allow SAM CLI IAM role creation [Y/n]:  Y`\
 
-Mantenha como está
-`Disable rollback [y/N]: N`
+Mantenha como está\
+`Disable rollback [y/N]: N`\
 
-Marque como YES
-` HelloWorldFunction may not have authorization defined, Is this okay? [y/N]: Y`
+Marque como YES\
+` HelloWorldFunction may not have authorization defined, Is this okay? [y/N]: Y`\
 
-Mantenha como está
-`Save arguments to configuration file [Y/n]: Y`
+Mantenha como está\
+`Save arguments to configuration file [Y/n]: Y`\
 
-Mantenha como está
-`SAM configuration file [samconfig.toml]: : ENTER`
+Mantenha como está\
+`SAM configuration file [samconfig.toml]: : ENTER`\
 
-Mantenha como está
-`SAM configuration environment [default]: ENTER`
+Mantenha como está\
+`SAM configuration environment [default]: ENTER`\
 
 #### Espere um momento que seu projeto será criado
 
@@ -90,9 +91,9 @@ Mantenha como está
 
 <p>
 CloudFormation outputs from deployed stack
--------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
 Outputs                                                                                                            
--------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------\
 Key                 HelloWorldApi                                                                                               
 Description         API Gateway endpoint URL for Prod stage for Hello World function                                            
 Value               https://x82e1x8xt5.execute-api.amazonaws.com:4566/Prod/hello/    <--------------
@@ -104,16 +105,17 @@ Value               arn:aws:lambda:us-east-1:000000000000:function:Hello_World-H
 Key                 HelloWorldFunctionIamRole                                                                                   
 Description         Implicit IAM Role created for Hello World function                                                          
 Value               arn:aws:iam::000000000000:role/Hello_World-HelloWorldFunctionRole-4aaa64bc  
---------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------\
 <p>
 
 
-MODIFIQUE ESSE LINK
+MODIFIQUE ESSE LINK\
 `https://x82e1x8xt5.execute-api.amazonaws.com:4566/Prod/hello/ `
+
 
 trocando `amazonaws.com` por `localhost.localstack.cloud`
 
-DE MODO QUE FIQUE ASSIM
+DE MODO QUE FIQUE ASSIM\
 `https://x82e1x8xt5.execute-api.localhost.localstack.cloud:4566/Prod/hello/`
 
 
