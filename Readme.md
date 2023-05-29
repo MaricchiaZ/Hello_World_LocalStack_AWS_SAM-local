@@ -47,40 +47,40 @@ Dê um nome ao seu projeto:\
 `cd Hello_World`
 
 Agora compile o projeto\
-`samlocal build`\
+`samlocal build`
 
 ### Passo a passo para subir o projeto na AWS 
 (lembre-se que estamos usando tudo localmente)
 
 Para subir a aplicação, podendo configurar os detalhes\
-`samlocal deploy --guided`\
+`samlocal deploy --guided`
 
 escolha o nome do projeto, se quiser usar o que já está aí, clique ENTER\
-`Stack Name [Hello_World]: ENTER`\
+`Stack Name [Hello_World]: ENTER`
 
 Para funcionar, você deve usar a região "us-east-1": \
-`AWS Region []:  us-east-1`\
+`AWS Region []:  us-east-1`
 
 Como é um projeto para teste podemos deixar como NÃO\
-`Confirm changes before deploy [Y/n]: N`\
+`Confirm changes before deploy [Y/n]: N`
 
 Mantenha como está\
-` Allow SAM CLI IAM role creation [Y/n]:  Y`\
+` Allow SAM CLI IAM role creation [Y/n]:  Y`
 
 Mantenha como está\
-`Disable rollback [y/N]: N`\
+`Disable rollback [y/N]: N`
 
 Marque como YES\
-` HelloWorldFunction may not have authorization defined, Is this okay? [y/N]: Y`\
+` HelloWorldFunction may not have authorization defined, Is this okay? [y/N]: Y`
 
 Mantenha como está\
-`Save arguments to configuration file [Y/n]: Y`\
+`Save arguments to configuration file [Y/n]: Y`
 
 Mantenha como está\
-`SAM configuration file [samconfig.toml]: : ENTER`\
+`SAM configuration file [samconfig.toml]: : ENTER`
 
 Mantenha como está\
-`SAM configuration environment [default]: ENTER`\
+`SAM configuration environment [default]: ENTER`
 
 #### Espere um momento que seu projeto será criado
 
@@ -92,8 +92,10 @@ Mantenha como está\
 <p>
 CloudFormation outputs from deployed stack
 ---------------------------------------------------------------------------------------
+
 Outputs                                                                                                            
----------------------------------------------------------------------------------------\
+---------------------------------------------------------------------------------------
+
 Key                 HelloWorldApi                                                                                               
 Description         API Gateway endpoint URL for Prod stage for Hello World function                                            
 Value               https://x82e1x8xt5.execute-api.amazonaws.com:4566/Prod/hello/    <--------------
