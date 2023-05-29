@@ -107,7 +107,7 @@ Value               arn:aws:lambda:us-east-1:000000000000:function:Hello_World-H
 Key                 HelloWorldFunctionIamRole                                                                                   
 Description         Implicit IAM Role created for Hello World function                                                          
 Value               arn:aws:iam::000000000000:role/Hello_World-HelloWorldFunctionRole-4aaa64bc  
------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------\
 <p>
 
 
@@ -127,7 +127,6 @@ Colocando esse link na barra de endereço você verá
 <p>
 {"message": "hello world"}
 <p>
-
 
 
 #### Seu primeiro projeto na AWS SAM foi realizado com sucesso !!!
